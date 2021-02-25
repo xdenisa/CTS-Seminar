@@ -3,7 +3,7 @@ package seminar1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Zoo {
+public class Zoo implements IZoo {
    private Zookeeper zookeeper;
    private List<Animal> animalList;
 
@@ -17,13 +17,14 @@ public class Zoo {
         this.animalList = animalList;
     }
 
-    public void AdaugaAnimal(Animal animal)
-    {
+
+    @Override
+    public void addAnimal(Animal animal) {
         animalList.add(animal);
     }
 
-    public void FeedAnimals()
-    {
+    @Override
+    public void feedAnimals() {
         for (Animal animal:animalList) {
             zookeeper.Feed(animal);
         }
