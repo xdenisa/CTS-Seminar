@@ -9,9 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PupilReader {
-    public static List<Aplicant> readPupil(String file) throws FileNotFoundException {
-        Scanner input2 = new Scanner(new File(file));
+public class PupilReader extends Reader{
+    public PupilReader(String fileName)
+    {
+        super(fileName);
+    }
+    public List<Aplicant> readAplicants() {
+        Scanner input2 = null;
+        try {
+            input2 = new Scanner(new File(fileName));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         input2.useDelimiter(",|\n");
         List<Aplicant> elevi = new ArrayList<>();
 

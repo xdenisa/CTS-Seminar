@@ -9,9 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class EmployeeReader {
-    public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
-        Scanner input2 = new Scanner(new File(file));
+public class EmployeeReader extends Reader{
+    public EmployeeReader(String fileName)
+    {
+        super(fileName);
+    }
+    public List<Aplicant> readAplicants() {
+        Scanner input2 = null;
+        try {
+            input2 = new Scanner(new File(fileName));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         input2.useDelimiter(",");
         List<Aplicant> angajati = new ArrayList<>();
 
