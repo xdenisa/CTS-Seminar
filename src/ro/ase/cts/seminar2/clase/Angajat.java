@@ -5,7 +5,16 @@ import java.util.Arrays;
 public class Angajat extends Aplicant{
 	private String ocupatie;
 	private int salariu;
-	
+	private static float sumaFinantare=10;
+
+	public  float getSumaFinantata() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Angajat.sumaFinantare = sumaFinantare;
+	}
+
 	public String getOcupatie() {
 		return ocupatie;
 	}

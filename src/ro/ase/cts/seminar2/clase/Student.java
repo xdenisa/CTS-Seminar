@@ -5,7 +5,15 @@ import java.util.Arrays;
 public class Student extends Aplicant {
 	protected String facultate;
 	protected int an_studii;
-	
+	private static float sumaFinantare=20;
+
+	public float getSumaFinantata() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Student.sumaFinantare = sumaFinantare;
+	}
 	
 	public String getFacultate() {
 		return facultate;
