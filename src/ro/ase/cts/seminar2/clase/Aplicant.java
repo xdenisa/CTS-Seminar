@@ -6,7 +6,7 @@ public abstract class Aplicant{
 	protected int varsta;
 	protected int punctaj;
 	protected int nr_proiecte;
-	protected String[] denumireProiect;
+	protected String[] denumiriProiect;
 	
 	
 	public String getNume() {
@@ -40,9 +40,7 @@ public abstract class Aplicant{
 		this.punctaj = punctaj;
 	}
 	
-	
 
-	
 	public Aplicant() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -54,7 +52,7 @@ public abstract class Aplicant{
 		this.varsta = varsta;
 		this.punctaj = punctaj;
 		this.nr_proiecte = nr_proiecte;
-		this.denumireProiect = denumireProiect;
+		this.denumiriProiect = denumireProiect;
 	}
 	public int getNr_proiecte() {
 		return nr_proiecte;
@@ -63,4 +61,8 @@ public abstract class Aplicant{
 		this.nr_proiecte = nr_proiecte;
 	}
 
+	public void setVectorDenumiri(String[] denumiriProiect, int nr_proiecte){
+		this.nr_proiecte=nr_proiecte;
+		this.denumiriProiect=denumiriProiect;
+	}
 }

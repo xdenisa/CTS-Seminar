@@ -15,30 +15,25 @@ public class StudentReader extends Reader {
         super(fileName);
     }
     public List<Aplicant> readAplicants() throws NumberFormatException {
-        Scanner input = null;
+        Scanner scanner = null;
         try {
-            input = new Scanner(new File(fileName));
+            scanner = new Scanner(new File(fileName));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        input.useDelimiter(",|\n");
+        scanner.useDelimiter(",|\n");
         List<Aplicant> studenti = new ArrayList<>();
 
-        while (input.hasNext()) {
-            String nume = input.next();
-            String prenume = (input.next()).toString();
-            int varsta = Integer.valueOf(input.nextInt());
-            int punctaj = Integer.valueOf(input.nextInt());
-            int nr = Integer.valueOf(input.nextInt());
-            String[] vect = new String[5];
-            for (int i = 0; i < nr; i++)
-                vect[i] = input.next();
-            int an_studii = input.nextInt();
-            String facultate = (input.next()).toString();
-            Student s = new Student(nume, prenume, varsta, punctaj, nr, vect, facultate, an_studii);
-            studenti.add(s);
+        while (scanner.hasNext()) {
+            Student student=new Student();
+            super.readAplicant(scanner,student);
+            int an_studii = scanner.nextInt();
+            String facultate = (scanner.next()).toString();
+            student.setAn_studii(an_studii);
+            student.setFacultate(facultate);
+            studenti.add(student);
         }
-        input.close();
+        scanner.close();
         return studenti;
     }
 }
