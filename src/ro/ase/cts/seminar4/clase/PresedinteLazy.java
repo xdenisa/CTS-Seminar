@@ -22,6 +22,7 @@ public class PresedinteLazy {
 
     public static synchronized PresedinteLazy getInstance(String nume, int varsta, int mandat)
     {
+        //o instanta trebuie sa o apeleze pe cealalta daca am 2 getInstance
         if(instance==null)
         {
             instance=new PresedinteLazy(nume, varsta, mandat);
