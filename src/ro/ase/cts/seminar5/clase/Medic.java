@@ -7,6 +7,6 @@ public class Medic extends PersonalSpital{
 
     @Override
     public String toString() {
-        return "\nMedic "+super.getNume();
+        return "\nMedic: "+super.getNume();
     }
 }

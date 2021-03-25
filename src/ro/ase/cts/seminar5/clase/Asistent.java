@@ -7,6 +7,6 @@ public class Asistent extends PersonalSpital{
 
     @Override
     public String toString() {
-        return "\nAsistent "+super.getNume();
+        return "\nAsistent: "+super.getNume();
     }
 }
