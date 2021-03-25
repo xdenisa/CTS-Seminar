@@ -1,10 +1,12 @@
 package ro.ase.cts.seminar5.program;
 
-import ro.ase.cts.seminar5.clase.*;
+import ro.ase.cts.seminar5.clase.entities.PersonalSpital;
+import ro.ase.cts.seminar5.clase.entities.TipPersonalSpital;
+import ro.ase.cts.seminar5.clase.factories.*;
 
 public class Seminar5Main {
 
-    public static void afisareInformatiiPersonalSpital(IFactory factory,String nume){
+    public static void afisareInformatiiPersonalSpital(IFactory factory, String nume){
         PersonalSpital personalSpital=factory.getPersonal(nume);
         System.out.println(personalSpital.toString());
     }

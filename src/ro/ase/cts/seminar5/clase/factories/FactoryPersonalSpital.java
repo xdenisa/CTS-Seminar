@@ -1,8 +1,10 @@
-package ro.ase.cts.seminar5.clase;
+package ro.ase.cts.seminar5.clase.factories;
+
+import ro.ase.cts.seminar5.clase.entities.*;
 
 public class FactoryPersonalSpital {
 
-    public PersonalSpital createPersonal(TipPersonalSpital personalSpital,String numeAngajat){
+    public PersonalSpital createPersonal(TipPersonalSpital personalSpital, String numeAngajat){
         switch (personalSpital){
             case Medic -> {
                 return new Medic(numeAngajat);

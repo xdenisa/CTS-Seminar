@@ -1,4 +1,4 @@
-package ro.ase.cts.seminar5.clase;
+package ro.ase.cts.seminar5.clase.entities;
 
 public class Infirmier extends PersonalSpital{
     public Infirmier(String nume) {
