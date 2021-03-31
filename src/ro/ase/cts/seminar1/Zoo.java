@@ -1,4 +1,4 @@
-package seminar1;
+package ro.ase.cts.seminar1;
 
 import java.util.ArrayList;
 import java.util.List;

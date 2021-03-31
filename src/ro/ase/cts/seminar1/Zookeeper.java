@@ -1,4 +1,4 @@
-package seminar1;
+package ro.ase.cts.seminar1;
 
 public class Zookeeper {
     private String name;

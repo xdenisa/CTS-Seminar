@@ -1,4 +1,4 @@
-package seminar1;
+package ro.ase.cts.seminar1;
 
 public class Zebra extends  Animal{
     private int varsta;
