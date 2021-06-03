@@ -1,8 +1,11 @@
 package ro.ase.cts.seminar14.teste;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import ro.ase.cts.seminar14.clase.Grupa;
 import ro.ase.cts.seminar14.clase.IStudent;
+import ro.ase.cts.seminar14.teste.categorii.GetPromovabilitateCategory;
+import ro.ase.cts.seminar14.teste.categorii.TesteUrgente;
 import ro.ase.cts.seminar14.teste.mocks.DummyStudent;
 import ro.ase.cts.seminar14.teste.mocks.DummyStudent2;
 import ro.ase.cts.seminar14.teste.mocks.FakeStudent;
@@ -21,6 +24,7 @@ public class MockTest {
     }
 
     @Test
+    @Category({GetPromovabilitateCategory.class, TesteUrgente.class})
     public void testGetPromovabilitate(){
         IStudent student=new DummyStudent2();
         Grupa grupa=new Grupa(1081);
@@ -30,6 +34,7 @@ public class MockTest {
     }
 
     @Test
+    @Category({GetPromovabilitateCategory.class,TesteUrgente.class})
     public void testGetPromovabilitateFakeStudent(){
         Grupa grupa=new Grupa(1081);
         for(int i=0;i<8;i++)
